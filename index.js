@@ -58,7 +58,7 @@ const btn = document.querySelector('button');
         
         function getDataWeather(loc){
             const key = 'a02156fe2d424a15ad611155231305';
-            const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${loc}&days=365&aqi=no&alerts=no`;
+            const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=Goiânia&days=365&aqi=no&alerts=no`;
             
             return fetch(url)
             .then(response => response.json())
