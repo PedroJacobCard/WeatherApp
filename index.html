@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style.css">
+        <title>DOM training</title>
+    </head>
+    <body id="body">
+        <div id="wrapper">
+            <div id="clouds">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="100" height="100" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_11_9" transform="scale(0.01)"/>
+                    </pattern>
+                    <image id="image0_11_9" width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAA41JREFUeJzt3EFSFDEYBeD3Wy7cydKNxXAC2WsVcAK4geMJwBOAJxBPAJ4AOAF4gtHSPeOOHbBz91wkFFM69CSdTDrT/b4qywU93el5k3SSTjcgIiIiIiIiIiIiIiIiIiIisgKs6wLkRHIE4AWAV3P+fAPgxszuypZqQEiukdwneUbylmGuSZ6Q3O66/L1BckTyMCKEpnDed30+K80HkduEqjFx6GrF5RLCmHXY9XmuBJKbTG+eQp2QXOv6nKtVOIwHE4UyR0dhPDjr+vyrQtelve4ojAfHXX8P1aAbW9SgaO+rypE6yTGAk67L4U3NbKPUwZ6VOlCkmrqfI5JHpQ5WXSC+doy6Lsc/io3mqwsEwH7XBZhj5H8oS1c0ELqe05b/918/n262drNkmSLslTjI82Xu3H/BuwDGmPNFk7wDcA7g3MwuUOikW9otcZCl9LJ8EIdwQYSa+v9ru37M2jGzq2UeIHuT5dvaCeLCAFwQNYcBAEsfk2QNhOQB3Pihr/NAS//BZAvE14zPufZXqdUIhOQm6hlZr7RcNWQoYayT3J3XZc8lORDfVNU6dshtBNdNv6Wb/Mx+kU/u9pKcYDiBzHMF4KOZfc+xs6RA/HjjOkdBeuDAzL6k7iS1ydJKjUfHJJOvpamB1D6QK22cGkpqIH0dAKZICiU1kCFfzJuM/axFtNaB0C3BfNP28wNw6Ds9UaJ7WST30O/5qpyuzGwn5gNRgfi2scidsx7ZMLPp4s2coCbL3+k7g8JoI2qBRFANUc1IY2bBLdHCGuJ7CwojAcm3ods2BjJzK1bSvAvdcFENOYJ6Uzmk1xA/519kpYU8aqohY6h25PI6dMOmQDQtkk/wD7spkK0MBRHnZ+iGTYFoar0DNS627qNfoRsqkDKCm6wnh/R+IfTLLMWRNTO7D9mwqYZkWUUh+BYaBqBASjiN2bipydoGcJlcnGH7bWZRvdUna4h/DiK4qslc0ffVF/WyWt2oFwDu2nEe+6GFN05ITgGstyrScP0AsN3m7XUh45Can/ur0T2AcdtXCS4MxC8i/tBm5wN0D1czWvdQg+/1Vva6ixq1bqZmBU+dmNkpgB2o5zXPJ2QIA4icy/Jd4RGA5GX3PfEVbt3VUa7Xz7Z+PsQvgBjDXfSHtKT0Au4pqquYBXChsrw4gOTsy4v7dh/lBsAfAHd6CbOIiIiIiIiIiIiIiIiIiIiI9xdxHKSM1FXEiwAAAABJRU5ErkJggg=="/>
+                    </defs>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="250" viewBox="0 0 200 50">
+                    <path fill="#ffffff" d="M33.6 69.5c-9.6 0-17.4-7.8-17.4-17.4 0-2.6 0.6-5.2 1.8-7.5C9.4 40.3 4 34.5 4 27.1c0-9.6 7.8-17.4 17.4-17.4 1.3 0 2.7 0.2 4 0.6 1.5-7.1 8-12.4 15.7-12.4 2.7 0 5.2 0.7 7.5 2 2.2-6.4 8-10.9 15-10.9 10.6 0 19.2 8.6 19.2 19.2 0 0.6 0 1.3-0.1 1.9 6.8 1.9 11.8 8 11.8 15.5 0 29.26-28.8 37.74-47.9 37.40H73.-3z"/>
+                </svg>              
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 250">
+                    <path fill="#ffffff" d="M27.5 78c-12.6 0-22.9-10.3-22.9-22.9C4.6 43.5 14.9 33.2 27.5 33.2c2.6 0 5.1 0.4 7.6 1.2 3.6-8 11.5-13.4 20.9-13.4 8.7 0 16.1 5.3 19.4 12.8 2.9-1.3 6.1-2 9.6-2 10.6 0 19.2 8.6 19.2 19.2 0 0.5 0 1-0.1 1.5 6.5 1.4 11.4 7.3 11.4 14.3 0 7.9-6.4 14.3-14.3 14.3H27.5c-7.9 0-14.3-6.4-14.3-14.3C13.2 84.4 19.6 78 27.5 78z"/>
+                </svg>
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="100" height="100" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_11_9" transform="scale(0.01)"/>
+                    </pattern>
+                    <image id="image0_11_9" width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAA41JREFUeJzt3EFSFDEYBeD3Wy7cydKNxXAC2WsVcAK4geMJwBOAJxBPAJ4AOAF4gtHSPeOOHbBz91wkFFM69CSdTDrT/b4qywU93el5k3SSTjcgIiIiIiIiIiIiIiIiIiIisgKs6wLkRHIE4AWAV3P+fAPgxszuypZqQEiukdwneUbylmGuSZ6Q3O66/L1BckTyMCKEpnDed30+K80HkduEqjFx6GrF5RLCmHXY9XmuBJKbTG+eQp2QXOv6nKtVOIwHE4UyR0dhPDjr+vyrQtelve4ojAfHXX8P1aAbW9SgaO+rypE6yTGAk67L4U3NbKPUwZ6VOlCkmrqfI5JHpQ5WXSC+doy6Lsc/io3mqwsEwH7XBZhj5H8oS1c0ELqe05b/918/n262drNkmSLslTjI82Xu3H/BuwDGmPNFk7wDcA7g3MwuUOikW9otcZCl9LJ8EIdwQYSa+v9ru37M2jGzq2UeIHuT5dvaCeLCAFwQNYcBAEsfk2QNhOQB3Pihr/NAS//BZAvE14zPufZXqdUIhOQm6hlZr7RcNWQoYayT3J3XZc8lORDfVNU6dshtBNdNv6Wb/Mx+kU/u9pKcYDiBzHMF4KOZfc+xs6RA/HjjOkdBeuDAzL6k7iS1ydJKjUfHJJOvpamB1D6QK22cGkpqIH0dAKZICiU1kCFfzJuM/axFtNaB0C3BfNP28wNw6Ds9UaJ7WST30O/5qpyuzGwn5gNRgfi2scidsx7ZMLPp4s2coCbL3+k7g8JoI2qBRFANUc1IY2bBLdHCGuJ7CwojAcm3ods2BjJzK1bSvAvdcFENOYJ6Uzmk1xA/519kpYU8aqohY6h25PI6dMOmQDQtkk/wD7spkK0MBRHnZ+iGTYFoar0DNS627qNfoRsqkDKCm6wnh/R+IfTLLMWRNTO7D9mwqYZkWUUh+BYaBqBASjiN2bipydoGcJlcnGH7bWZRvdUna4h/DiK4qslc0ffVF/WyWt2oFwDu2nEe+6GFN05ITgGstyrScP0AsN3m7XUh45Can/ur0T2AcdtXCS4MxC8i/tBm5wN0D1czWvdQg+/1Vva6ixq1bqZmBU+dmNkpgB2o5zXPJ2QIA4icy/Jd4RGA5GX3PfEVbt3VUa7Xz7Z+PsQvgBjDXfSHtKT0Au4pqquYBXChsrw4gOTsy4v7dh/lBsAfAHd6CbOIiIiIiIiIiIiIiIiIiIiI9xdxHKSM1FXEiwAAAABJRU5ErkJggg=="/>
+                    </defs>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="250" viewBox="0 0 200 50">
+                    <path fill="#ffffff" d="M54.3 92.2c-17.1 0-31-13.9-31-31 0-6.3 1.8-12.2 5-17.2C17.2 37.3 6 28.3 6 17.5 6 7.8 13.8 0 23.5 0c5.9 0 11.4 2.2 15.6 6.2 3.9-1.2 8-1.8 12.4-1.8 15.6 0 28.3 12.7 28.3 28.3 0 1.8-0.2 3.6-0.5 5.3C78.8 40 89.7 34.1 102 34.1c14.3 0 26 11.6 26 26 0 0.2 0 0.5 0 0.7 10.5 1.7 18.5 11.1 18.5 22.1 0 12.4-10 22.4-22.4 22.4H54.3c-10.3 0-18.7-8.4-18.7-18.7 0-9.9 7.7-18.1 17.3-18.7 0.5-0.1 1.1-0.1 1.6-0.1 3.9 0 7.1 3.2 7.1 7.1 0 0.2 0 0.5-0.1 0.7 0.3 0 0.7-0.1 1-0.1 6.9 0 12.4 5.6 12.4 12.4 0 4.9-2.9 9.1-7 11.1 0 0 0 0.1-0.1 0.1z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="250" viewBox="0 0 400 450">
+                    <path fill="#ffffff" d="M27.5 78c-12.6 0-22.9-10.3-22.9-22.9C4.6 43.5 14.9 33.2 27.5 33.2c2.6 0 5.1 0.4 7.6 1.2 3.6-8 11.5-13.4 20.9-13.4 8.7 0 16.1 5.3 19.4 12.8 2.9-1.3 6.1-2 9.6-2 10.6 0 19.2 8.6 19.2 19.2 0 0.5 0 1-0.1 1.5 6.5 1.4 11.4 7.3 11.4 14.3 0 7.9-6.4 14.3-14.3 14.3H27.5c-7.9 0-14.3-6.4-14.3-14.3C13.2 84.4 19.6 78 27.5 78z"/>
+                </svg>
+                <svg width="100" height="250" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="100" height="100" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_11_9" transform="scale(0.01)"/>
+                    </pattern>
+                    <image id="image0_11_9" width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAA41JREFUeJzt3EFSFDEYBeD3Wy7cydKNxXAC2WsVcAK4geMJwBOAJxBPAJ4AOAF4gtHSPeOOHbBz91wkFFM69CSdTDrT/b4qywU93el5k3SSTjcgIiIiIiIiIiIiIiIiIiIisgKs6wLkRHIE4AWAV3P+fAPgxszuypZqQEiukdwneUbylmGuSZ6Q3O66/L1BckTyMCKEpnDed30+K80HkduEqjFx6GrF5RLCmHXY9XmuBJKbTG+eQp2QXOv6nKtVOIwHE4UyR0dhPDjr+vyrQtelve4ojAfHXX8P1aAbW9SgaO+rypE6yTGAk67L4U3NbKPUwZ6VOlCkmrqfI5JHpQ5WXSC+doy6Lsc/io3mqwsEwH7XBZhj5H8oS1c0ELqe05b/918/n262drNkmSLslTjI82Xu3H/BuwDGmPNFk7wDcA7g3MwuUOikW9otcZCl9LJ8EIdwQYSa+v9ru37M2jGzq2UeIHuT5dvaCeLCAFwQNYcBAEsfk2QNhOQB3Pihr/NAS//BZAvE14zPufZXqdUIhOQm6hlZr7RcNWQoYayT3J3XZc8lORDfVNU6dshtBNdNv6Wb/Mx+kU/u9pKcYDiBzHMF4KOZfc+xs6RA/HjjOkdBeuDAzL6k7iS1ydJKjUfHJJOvpamB1D6QK22cGkpqIH0dAKZICiU1kCFfzJuM/axFtNaB0C3BfNP28wNw6Ds9UaJ7WST30O/5qpyuzGwn5gNRgfi2scidsx7ZMLPp4s2coCbL3+k7g8JoI2qBRFANUc1IY2bBLdHCGuJ7CwojAcm3ods2BjJzK1bSvAvdcFENOYJ6Uzmk1xA/519kpYU8aqohY6h25PI6dMOmQDQtkk/wD7spkK0MBRHnZ+iGTYFoar0DNS627qNfoRsqkDKCm6wnh/R+IfTLLMWRNTO7D9mwqYZkWUUh+BYaBqBASjiN2bipydoGcJlcnGH7bWZRvdUna4h/DiK4qslc0ffVF/WyWt2oFwDu2nEe+6GFN05ITgGstyrScP0AsN3m7XUh45Can/ur0T2AcdtXCS4MxC8i/tBm5wN0D1czWvdQg+/1Vva6ixq1bqZmBU+dmNkpgB2o5zXPJ2QIA4icy/Jd4RGA5GX3PfEVbt3VUa7Xz7Z+PsQvgBjDXfSHtKT0Au4pqquYBXChsrw4gOTsy4v7dh/lBsAfAHd6CbOIiIiIiIiIiIiIiIiIiIiI9xdxHKSM1FXEiwAAAABJRU5ErkJggg=="/>
+                    </defs>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 20">
+                    <path fill="#ffffff" d="M33.7 82.2c-6.7 0-12.1-5.4-12.1-12.1 0-1.8 0.4-3.6 1.1-5.2C12 59.5 6 51.7 6 42.6c0-10.7 8.7-19.4 19.4-19.4 1.5 0 2.9 0.2 4.3 0.7C28.2 15.1 35.9 10 44.2 10c7.9 0 14.6 5 17.2 12 2.9-1 6.2-1.6 9.7-1.6 10.6 0 19.2 8.6 19.2 19.2 0 0.6 0 1.2-0.1 1.7 5.5 1.6 9.4 7 0.4 13.5 9 7.9-6.4 32.3-28.3 28.4H 43.7z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="250" viewBox="0 0 200 50">
+                    <path fill="#ffffff" d="M33.6 69.5c-9.6 0-17.4-7.8-17.4-17.4 0-2.6 0.6-5.2 1.8-7.5C9.4 40.3 4 34.5 4 27.1c0-9.6 7.8-17.4 17.4-17.4 1.3 0 2.7 0.2 4 0.6 1.5-7.1 8-12.4 15.7-12.4 2.7 0 5.2 0.7 7.5 2 2.2-6.4 8-10.9 15-10.9 10.6 0 19.2 8.6 19.2 19.2 0 0.6 0 1.3-0.1 1.9 6.8 1.9 11.8 8 11.8 15.5 0 29.26-28.8 37.74-47.9 37.40H73.-3z"/>
+                </svg>
+            </div>  
+            <div id="container">
+                <h1 id="title" class="h1-style, h1-st">Weather request</h1>
+                <div id="city">
+                    <h2>Enter the City name</h2>
+                    <input id="input-city" type="text">
+                    <h2>What do you want to know?</h2>
+                    <select id="select">
+                        <option>Select</option>
+                        <option>Name</option>
+                        <option>Region</option>
+                        <option>Country</option>
+                        <option>Latitude</option>
+                        <option>Longitude</option>
+                        <option>Timezone-id</option>
+                        <option>Localtime-epoch</option>
+                        <option>Localtime</option>
+                        <option>Weather</option>
+                        <option>Last-update</option>
+                        <option>Last-update-epoch</option>
+                        <option>Temp-celsius</option>
+                        <option>Temp-fahrenheit</option>
+                        <option>Wind-mph</option>
+                        <option>Wind-kph</option>
+                        <option>Wind-degree</option>
+                        <option>Wind-direction</option>
+                        <option>Pressure-millibar</option>
+                        <option>Pressure-in</option>
+                        <option>Humidity</option>
+                        <option>Cloud</option>
+                        <option>Feels-like-celsius</option>
+                        <option>Feels-like-fahrenheit</option>
+                        <option>Visibility-km</option>
+                        <option>Visibility-miles</option>
+                        <option>Ultraviolet</option>
+                        <option>Gust-mph</option>
+                        <option>Gust-kph</option>
+                    </select>
+                    <button id="btn">Submit</button>   
+                    <h3 id="weather-answer">Answer: </h3>
+                </div>
+            </div>
+            <footer id="footer">
+            <div class="separator">
+                <div class="line"></div>
+            </div>
+            <div class="social-media">
+                <a href="https://github.com/PedroJacobCard"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/pedro-jacob-82374bb3/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/pedrojacob05"><i class="bi bi-twitter"></i></a>
+            </div>
+            <div class="copyright">
+                <i class="bi bi-c-circle"></i><span>Copyright - Pedro Jacob | 2023<br/>
+                API source by <a href="https://www.weatherapi.com/">Weather api</a></span>
+            </div>
+            </footer>
+        </div>
+        <script src="index.js"></script>
+</body>
+</html>

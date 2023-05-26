@@ -1,0 +1,222 @@
+#wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: linear-gradient(45deg, rgb(221, 118, 239), rgb(108, 108, 241), rgb(18, 18, 214));
+    background-size: 200% 200%;
+    animation: gradientAnimation 20s ease infinite;
+    overflow-y: scroll;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#wrapper #clouds{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 85%;
+    margin-top: -25rem;
+}
+
+#wrapper #clouds:nth-child(1){
+    animation: animate 10s linear infinite;
+}
+
+#wrapper #clouds:nth-child(2){
+    animation: animate 7s linear infinite;
+}
+
+#wrapper #clouds:nth-child(3){
+    animation: animate 9s linear infinite;
+}
+
+#wrapper #clouds:nth-child(4){
+    animation: animate 12s linear infinite;
+}
+
+#wrapper #clouds:nth-child(5){
+    animation: animate 15s linear infinite;
+}
+
+#wrapper #clouds:nth-child(6){
+    animation: animate 4s linear infinite;
+}
+
+#wrapper #clouds:nth-child(7){
+    animation: animate 8s linear infinite;
+}
+
+#wrapper #clouds:nth-child(8){
+    animation: animate 9s linear infinite;
+}
+
+#wrapper #clouds:nth-child(9){
+    animation: animate 7s linear infinite;
+}
+
+@keyframes animate{
+    0% {
+        transform:translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform:translateX(60px);
+        opacity: 0;
+    }
+}
+
+#container{
+    width: 70%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color:  rgba( 83,140,240, 0.5);
+    color: #02347a;
+    background-size: 50%; 
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px; 
+}
+
+#container input{
+    height: 1.5rem;
+    text-align: center;
+    background-color:  rgb(231, 202, 255);
+    color: #02347a;
+    border-radius: 4px; 
+    outline: none;
+    border: none;
+    box-shadow:  5px -5px 10px #1c68d3,
+             -3px 3px 8px #78b5fb;
+}
+
+#container select{
+    height: 1.5rem;
+    text-align: center;
+    background-color:  rgb(231, 202, 255);
+    color: #02347a;
+    border-radius: 4px; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow:  5px -5px 10px #1c68d3,
+             -3px 3px 8px #78b5fb;
+}
+
+#container button{
+    height: 1.5rem;
+    text-align: center;
+    background-color:  rgb(231, 202, 255);
+    color: #02347a;
+    border-radius: 4px; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow:  5px -5px 10px #1c68d3,
+    -2px 2px 8px #78b5fb;
+}
+
+#container button:hover{
+    opacity: 0.9;
+}
+
+#container button:active{
+    background-color:  rgb(207, 155, 250);
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 5rem;
+    margin: 5rem 0 1.5rem;
+    color: #02347a;
+    font-family: var(--font-family);
+    font-size: 18px;
+}
+
+#footer .separator{
+    background-color: #d8d8d8;
+    height: 10px;
+    width: 15%;
+}
+
+#footer .separator .line{
+    height: 0.5px;
+    background-color: #02347a;
+}
+
+#footer .social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+#footer .social-media i{
+    font-size: 24px;
+    color: #02347a;
+}
+
+#footer .social-media i:hover{
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+#footer .copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#footer .copyright i{
+    margin-top: -20px;
+}
+
+#footer .copyright a{
+    text-decoration: none;
+    color: #283e5d;
+}
+
+@media  only screen and (max-width: 430px) {
+    #wrapper #clouds {
+        width: 65%;
+        height: 100vh;
+        margin-top: -35rem;
+    }
+
+    #container {
+        width: 90%;
+        margin-top: 0;
+    }
+}
